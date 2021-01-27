@@ -19,6 +19,126 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
+
+  <style>
+    ul.files {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    .file-link {
+        display: flex;
+        width: 230px;
+        background: #f2f2f2;
+        margin: 15px 10px;
+        padding: 26px;
+        border-radius: 10px;
+        align-items: center;
+    }
+
+    .link-item i {
+      font-size: 32px;
+      color: #9c9c9c;
+      margin-right: 10px;
+  }
+
+  .ad-nav ul {
+    list-style: none;
+    display: flex;
+    background: #f2f2f2;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.ad-nav ul li {
+  margin-right: 30px;
+  font-size: 12px;
+}
+
+.link-name {
+    font-size: 15px;
+    color: #212529;
+    width: 200px;
+    overflow-x: auto;
+}
+
+.link-item img {
+    width: 200px;
+    height: 130px;
+    object-fit: cover;
+
+    margin-bottom: 10px;
+}
+
+ul.files-img {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+ul.files-img li {
+    margin: 5px;
+    background: #f2f2f2;
+    padding: 20px;
+}
+
+.hidedash {
+  display: none;
+}
+
+li.media-page {
+  position: relative;
+}
+
+li.media-page::after {
+    position: absolute;
+    content: ">>";
+    right: -21px;
+}
+
+.media-upload-btn input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 00;
+}
+
+.media-upload-btn {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.media-upload-btn button {
+    background: #4893cd;
+    border: 0;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 30px;
+}
+
+.media-upload-btn button i {
+  margin-right: 5px;
+}
+
+.media-upload-btn {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin: 10px 0 0 10px;
+    font-size: 12px;
+}
+
+
+  </style>
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
@@ -39,434 +159,166 @@
   </nav>
   <!-- /.navbar -->
 
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
-    </a>
-
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
-        </div>
-      </div>
-
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Dashboard
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="./index.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v1</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index2.html" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v2</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v3</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Widgets
-                <span class="right badge badge-danger">New</span>
-              </p>
-            </a>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Layout Options
-                <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">6</span>
-              </p>
-            </a>
-            
-          </li>
-          
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
-              <p>
-                Forms
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/forms/general.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>General Elements</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/advanced.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Advanced Elements</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/editors.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Editors</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/validation.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Validation</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
-              <p>
-                Tables
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/tables/simple.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Simple Tables</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/tables/data.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>DataTables</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/tables/jsgrid.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>jsGrid</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-header">EXAMPLES</li>
-          <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
-              <i class="nav-icon fas fa-calendar-alt"></i>
-              <p>
-                Calendar
-                <span class="badge badge-info right">2</span>
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
-              <p>
-                Gallery
-              </p>
-            </a>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-envelope"></i>
-              <p>
-                Mailbox
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/mailbox/mailbox.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Inbox</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/mailbox/compose.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Compose</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/mailbox/read-mail.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Read</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
-              <p>
-                Pages
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/examples/invoice.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Invoice</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/profile.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Profile</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/e-commerce.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>E-commerce</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/projects.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Projects</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/project-add.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Project Add</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/project-edit.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Project Edit</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/project-detail.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Project Detail</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/contacts.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Contacts</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-plus-square"></i>
-              <p>
-                Extras
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/examples/login.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Login</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/register.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Register</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/forgot-password.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Forgot Password</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/recover-password.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Recover Password</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/lockscreen.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Lockscreen</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/legacy-user-menu.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Legacy User Menu</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/language-menu.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Language Menu</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/404.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Error 404</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/500.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Error 500</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/pace.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Pace</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/blank.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Blank Page</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="starter.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Starter Page</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-header">MISCELLANEOUS</li>
-          <li class="nav-item">
-            <a href="https://adminlte.io/docs/3.0" class="nav-link">
-              <i class="nav-icon fas fa-file"></i>
-              <p>Documentation</p>
-            </a>
-          </li>
-          <li class="nav-header">MULTI LEVEL EXAMPLE</li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-circle nav-icon"></i>
-              <p>Level 1</p>
-            </a>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-circle"></i>
-              <p>
-                Level 1
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Level 2</p>
-                </a>
-              </li>
-              <li class="nav-item has-treeview">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>
-                    Level 2
-                    <i class="right fas fa-angle-left"></i>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="far fa-dot-circle nav-icon"></i>
-                      <p>Level 3</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="far fa-dot-circle nav-icon"></i>
-                      <p>Level 3</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="far fa-dot-circle nav-icon"></i>
-                      <p>Level 3</p>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Level 2</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-circle nav-icon"></i>
-              <p>Level 1</p>
-            </a>
-          </li>
-          <li class="nav-header">LABELS</li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-danger"></i>
-              <p class="text">Important</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-warning"></i>
-              <p>Warning</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-info"></i>
-              <p>Informational</p>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
 
   <div class="content-wrapper">
+      <article class="ad-ip-sing">
+        <div class="ad-nav">
+            <ul>
+              <li style="color: #0056b3;" class="media-page">Media</li>
+              <li>Folder</li>
+            </ul>
+        </div>
+
+        <div class="media-wrap">
+          <ul class="files">
+            <li>
+              <div class="file-link">
+                  <div class="link-item">
+                      <i class="fas fa-folder"></i>
+                  </div>
+
+                  <div class="link-name">
+                      Homepage
+                  </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="file-link">
+                  <div class="link-item">
+                      <i class="fas fa-folder"></i>
+                  </div>
+
+                  <div class="link-name">
+                      Documents
+                  </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="file-link">
+                  <div class="link-item">
+                      <i class="fas fa-folder"></i>
+                  </div>
+
+                  <div class="link-name">
+                      Board of Directors
+                  </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+        <div class="mediashow hidedash">
+          <div class="media-upload-btn">
+            
+              <button><i class="fas fa-cloud-upload-alt"></i>Upload</button>
+            
+            <input id='' type='file' />
+          </div>
+
+          <ul class="files-img">
+              <li>
+                  <div class="img-link">
+                      <div class="link-item">
+                          <img src="kb-banner.jpg" alt="">
+                      </div>
+
+                      <div class="link-name">
+                          image_name_link.jpg
+                      </div>
+                  </div>
+              </li>
+
+              <li>
+                  <div class="img-link">
+                      <div class="link-item">
+                          <img src="kb-banner.jpg" alt="">
+                      </div>
+
+                      <div class="link-name">
+                          this_is_long_image_name-image_name_link.jpg
+                      </div>
+                  </div>
+              </li>
+
+              <li>
+                  <div class="img-link">
+                      <div class="link-item">
+                          <img src="kb-banner.jpg" alt="">
+                      </div>
+
+                      <div class="link-name">
+                          image_name_link.jpg
+                      </div>
+                  </div>
+              </li>
+
+              <li>
+                  <div class="img-link">
+                      <div class="link-item">
+                          <img src="kb-banner.jpg" alt="">
+                      </div>
+
+                      <div class="link-name">
+                        image_name_link.jpg
+                      </div>
+                  </div>
+              </li>
+
+              <li>
+                <div class="img-link">
+                    <div class="link-item">
+                        <img src="kb-banner.jpg" alt="">
+                    </div>
+
+                    <div class="link-name">
+                        image_name_link.jpg
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="img-link">
+                    <div class="link-item">
+                        <img src="kb-banner.jpg" alt="">
+                    </div>
+
+                    <div class="link-name">
+                        image_name_link.jpg
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="img-link">
+                    <div class="link-item">
+                        <img src="kb-banner.jpg" alt="">
+                    </div>
+
+                    <div class="link-name">
+                        image_name_link.jpg
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="img-link">
+                    <div class="link-item">
+                        <img src="kb-banner.jpg" alt="">
+                    </div>
+
+                    <div class="link-name">
+                      image_name_link.jpg
+                    </div>
+                </div>
+            </li>
+          </ul>
+      </div>
+
+      </article>
+
       <article class="ad-ip-sing">
         <h2>Banner Section</h2>
 
@@ -539,7 +391,7 @@
           <tbody>
             <tr>
               <td scope="row">1</td>
-              <td><input type="text" placeholder="Quality Service"></td>
+              <td><input type="text" value="Quality Service"></td>
               <td><textarea name="" id="" placeholder="Quality Service based on recruitment business of the foreign workers as per requirement of our clients and business associates."></textarea></td>
               <td><img class="adminimg-prev" src="kb-banner.jpg" alt="">
 
@@ -552,7 +404,7 @@
 
             <tr>
               <td scope="row">2</td>
-              <td><input type="text" placeholder="Quality Service"></td>
+              <td><input type="text" value="Right Person in the Right Job"></td>
               <td><textarea name="" id="" placeholder="Quality Service based on recruitment business of the foreign workers as per requirement of our clients and business associates."></textarea></td>
               <td><img class="adminimg-prev" src="kb-banner.jpg" alt="">
 
@@ -565,7 +417,7 @@
 
             <tr>
               <td scope="row">3</td>
-              <td><input type="text" placeholder="Quality Service"></td>
+              <td><input type="text" value="Committed in Serving"></td>
               <td><textarea name="" id="" placeholder="Quality Service based on recruitment business of the foreign workers as per requirement of our clients and business associates."></textarea></td>
               <td><img class="adminimg-prev" src="kb-banner.jpg" alt="">
 
@@ -580,7 +432,11 @@
           </tbody>
         </table>
 
-        
+        <div class="adn-btn">
+          <form action="">
+            <button >Add New</button>
+          </form>
+        </div>
 
       </article>
   </div>
@@ -634,5 +490,29 @@
 
 
 </script>
+
+<script>
+  
+  let listWrap = document.querySelector('.media-wrap');
+  let mediaList = document.querySelectorAll('.file-link');
+  let mediaImgList = document.querySelector('.mediashow');
+  let mediaNav = document.querySelector('li.media-page');
+
+
+  mediaNav.addEventListener('click', function() {
+    mediaImgList.classList.add('hidedash');
+    listWrap .classList.remove('hidedash');
+  })
+
+  mediaList.forEach(mlist => {
+      mlist.addEventListener('click', function() {
+        mediaImgList.classList.toggle('hidedash');
+        listWrap .classList.toggle('hidedash');
+      })
+  });
+
+
+</script>
+
 </body>
 </html>
